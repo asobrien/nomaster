@@ -19,6 +19,7 @@ import (
 )
 
 var (
+	Version string = "0.1.0"
 	config  = viper.New()
 	Trace   *log.Logger
 	Info    *log.Logger
@@ -260,7 +261,7 @@ func main() {
 	app.Usage = `A small Github webhook server to shutdown pull
 		requests against master.`
 	app.UsageText = "nomaster [options]"
-	app.Version = "v0.1.0"
+	app.Version = Version
 	app.Compiled = time.Now()
 	app.Authors = []cli.Author{
 		cli.Author{
